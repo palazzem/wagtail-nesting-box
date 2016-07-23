@@ -1,0 +1,73 @@
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load blog_tags %}
+
+
+<div>
+    {% for article in articles %}
+        <div>
+            <article>
+                <a href="{% pageurl article %}">
+                    <h2>{{ article.title }}</h2>
+                </a>
+                <div>
+                    <span>{{ article.owner.get_full_name|default:article.owner }}</span>
+                    <span >{{ article.date|date:"N d, Y" }}</span>
+                </div>
+
+                {% if article.cover %}
+                    <a href="{% pageurl article %}">
+                        <div>
+                            <figure>
+                                {% image article.cover original as cover %}
+                                <img src="{{cover.url}}" />
+                            </figure>
+                        </div>
+                    </a>
+                {% endif %}
+                <p>{{ article.intro }}</p>
+            </article>
+            <a href="{% pageurl article %}">Read more...</a>
+        </div>
+    {% endfor %}
+
+    {% if articles.paginator.num_pages > 1 %}
+        <ul>
+            {% if articles.has_previous %}
+                <li><a href="?page=1">&laquo;</a></li>
+                <li><a href="{% replace_query_link 'page' articles.previous_page_number %}">&lsaquo;</a></li>
+            {% endif %}
+
+            {% for item in articles.paginator.page_range %}
+                {% if articles.number == item %}
+                    <li>{{ item }}</li>
+                {% else %}
+                    <li><a href="{% replace_query_link 'page' item %}">{{ item }}</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if articles.has_next %}
+                <li><a href="{% replace_query_link 'page' articles.next_page_number %}">&rsaquo;</a></li>
+                <li><a href="{% replace_query_link 'page' articles.paginator.num_pages %}">&raquo;</a></li>
+            {% endif %}
+        </ul>
+    {% endif %}
+</div>
+<div>
+    <ul>
+        {% spaceless %}
+            {% for tag in page.tags %}
+                <li>
+                    {% if current_tag == tag.name %}
+                        {% slugurl "blog" as blog_link %}
+                        <a href="{{ blog_link }}">
+                            __{{ tag }}__
+                        </a>
+                    {% else %}
+                        <a href="?tag={{ tag }}">{{ tag }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        {% endspaceless %}
+    </ul>
+</div>
