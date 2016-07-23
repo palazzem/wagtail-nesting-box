@@ -11,7 +11,7 @@ def get_root_page():
     return Page.objects.get(slug='root')
 
 
-def add_child(parent, items):
+def link_page(parent, items):
     """
     Sets one or more items as parent children. This helper
     may be useful when you generate a lot of instances and
