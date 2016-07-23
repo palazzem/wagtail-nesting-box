@@ -94,6 +94,9 @@ class PostTag(TaggedItemBase):
 
 
 class Post(Page):
+    parent_page_types = ['Blog']
+    subpage_types = []
+
     cover = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
