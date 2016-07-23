@@ -1,3 +1,7 @@
+# testing
 pytest
 pytest-django
 pytest-cov
+
+# fixtures
+model_mommy
