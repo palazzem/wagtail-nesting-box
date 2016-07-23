@@ -7,4 +7,4 @@
 # we are only ever declaring our dependencies in one place.
 
 -r requirements/requirements-testing.txt
--r requirements/requirements-packaging.txt
+-r requirements/requirements-codestyle.txt
