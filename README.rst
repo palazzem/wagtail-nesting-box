@@ -19,7 +19,8 @@ Requirements
 ------------
 
 * Python 2.7, 3.3, 3.4 and 3.5
-* Django 1.8, 1,9
+* Django 1.8, 1.9 (only with Python 2.7 and 3.4+)
+* Wagtail 1.4, 1.5
 
 Features
 --------
