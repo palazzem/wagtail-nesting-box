@@ -8,12 +8,16 @@ Wagtail nesting box
 .. image:: https://codecov.io/gh/palazzem/wagtail-nesting-box/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/palazzem/wagtail-nesting-box
 
-A set of abstract and concrete models for your Wagtail website.
+A set of abstract and concrete models for your `Wagtail`_ website.
+
+.. _Wagtail: https://wagtail.io/
 
 Support
 -------
 
-If you need support, please use the Github issue tracker.
+If you need support, please use the `GitHub issue tracker`_.
+
+.. _GitHub issue tracker: https://github.com/palazzem/wagtail-nesting-box/issues
 
 Contributing
 ------------
