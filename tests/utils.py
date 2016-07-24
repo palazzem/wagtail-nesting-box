@@ -1,4 +1,5 @@
 from wagtail.wagtailcore.models import Page
+from wagtail.wagtailcore.middleware import SiteMiddleware
 
 
 def get_root_page():
@@ -26,3 +27,15 @@ def link_page(parent, items):
         # we don't have an iterable so we add just
         # this item
         parent.add_child(instance=items)
+
+
+def add_site_to_request(request):
+    """
+    For the given ``RequestFactory`` object, use the Wagtail
+    ``SiteMiddleware`` to add the ``Site`` object to the request.
+    This is helpful if you don't want to use the ``Client``
+    object to access to a view's context.
+    """
+    middleware = SiteMiddleware()
+    middleware.process_request(request)
+    return request
