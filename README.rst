@@ -28,10 +28,21 @@ Requirements
 * Django 1.8, 1.9 (only with Python 2.7 and 3.4+)
 * Wagtail 1.4, 1.5
 
-Features
+Overview
 --------
 
-Coming soon
+Wagtail nesting box is a powerful and flexible toolkit that helps you to build your Wagtail
+websites. Out of the box without extending any model, it provides:
+
+* Static web pages: you can create a static page to write, for instance, your *About us* page.
+* A full fledged blog: it includes an index page that provides pagination and tag filtering (based
+  on tags usage).
+* Streamfields as default: both static and post pages, use the Wagtail ``StreamField`` to
+  write the text body.
+* Template free: the package includes a set of demo template that you can copy to implement your
+  own styles.
+* Flexibility: the toolkit provides a set of models, templates and generic functions. If you need
+  a slightly different behavior, you can simply extend our models.
 
 Getting started
 ---------------
@@ -47,11 +58,3 @@ License
 -------
 
 wagtail-nesting-box is released under the terms of the **BSD license**. Full details in ``LICENSE`` file.
-
-Changelog
----------
-
-Development
-~~~~~~~~~~~
-
-Project bootstrap
