@@ -66,6 +66,7 @@ def pytest_configure():
         INSTALLED_APPS=(
             'wagtail_box',
             'wagtail_box.blog',
+            'wagtail_box.pages',
 
             'wagtail.contrib.settings',
             'wagtail.wagtailforms',
