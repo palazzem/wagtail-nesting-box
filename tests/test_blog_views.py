@@ -54,7 +54,7 @@ def test_blog_tag_filter(rf):
     # the third post is tagged with tag_1
     mommy.make('blog.PostTag', tag=tag_1, content_object=posts[2])
     # create a fake request with a tag attribute
-    request = add_site_to_request(rf.get(blog.slug, { 'tag': tag_1.name }))
+    request = add_site_to_request(rf.get(blog.slug, {'tag': tag_1.name}))
     context = blog.get_context(request)
     assert len(context['articles']) == 2
     assert context['current_tag'] == tag_1.name
@@ -89,7 +89,7 @@ def test_blog_pagination_default(rf, site):
     assert posts[3] in context['articles']
     assert posts[4] in context['articles']
     # create a fake request for the second page
-    request = add_site_to_request(rf.get(blog.slug, { 'page': 2 }))
+    request = add_site_to_request(rf.get(blog.slug, {'page': 2}))
     context = blog.get_context(request)
     assert len(context['articles']) == 5
     assert posts[5] in context['articles']
@@ -130,12 +130,12 @@ def test_blog_pagination(rf, site):
     assert len(context['articles']) == 1
     assert posts[0] in context['articles']
     # create a fake request for the second page
-    request = add_site_to_request(rf.get(blog.slug, { 'page': 2 }))
+    request = add_site_to_request(rf.get(blog.slug, {'page': 2}))
     context = blog.get_context(request)
     assert len(context['articles']) == 1
     assert posts[1] in context['articles']
     # create a fake request for the first page
-    request = add_site_to_request(rf.get(blog.slug, { 'page': 3 }))
+    request = add_site_to_request(rf.get(blog.slug, {'page': 3}))
     context = blog.get_context(request)
     assert len(context['articles']) == 1
     assert posts[2] in context['articles']
