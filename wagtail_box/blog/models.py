@@ -65,7 +65,7 @@ class Blog(Page):
             articles = paginator.page(paginator.num_pages)
 
         # Updating the template context
-        context = super().get_context(request)
+        context = super(Blog, self).get_context(request)
         context['articles'] = articles
         context['current_tag'] = tag
         return context
