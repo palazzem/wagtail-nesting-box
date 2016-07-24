@@ -5,6 +5,9 @@ Wagtail nesting box
 .. image:: https://travis-ci.org/palazzem/wagtail-nesting-box.svg?branch=master
     :target: https://travis-ci.org/palazzem/wagtail-nesting-box
 
+.. image:: https://codecov.io/gh/palazzem/wagtail-nesting-box/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/palazzem/wagtail-nesting-box
+
 A set of abstract and concrete models for your Wagtail website.
 
 Support
