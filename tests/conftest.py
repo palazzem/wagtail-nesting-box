@@ -1,4 +1,24 @@
+import pytest
+
+
+@pytest.fixture
+def site():
+    """
+    Returns the Wagtail test Site, as provided in the
+    Django configuration settings
+    """
+    from django.conf import settings
+    from wagtail.wagtailcore.models import Site
+
+    return Site.objects.get(id=settings.SITE_ID)
+
+
 def pytest_configure():
+    """
+    Settings configuration for the Django web framework. Update this
+    configuration if you need to change the default behavior of
+    Django during tests
+    """
     from django.conf import settings
 
     settings.configure(
