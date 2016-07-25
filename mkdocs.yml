@@ -1,0 +1,10 @@
+site_name: Wagtail nesting box
+theme: readthedocs
+repo_url: https://github.com/palazzem/wagtail-nesting-box
+site_description: A set of abstract and concrete models for your Wagtail website.
+site_author: Emanuele Palazzetti
+pages:
+    - 'Overview': 'index.md'
+    - 'Tutorial: create a blog': 'tutorial_blog.md'
+    - 'Tutorial: create a static page': 'tutorial_static_page.md'
+    - 'Changelog': 'changelog.md'
