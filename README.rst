@@ -51,12 +51,18 @@ websites. Out of the box without extending any model, it provides:
 Getting started
 ---------------
 
-Coming soon
+The best way to get started with this project, is following one of our tutorials:
+
+* `Tutorial: create a blog`_
+* `Tutorial: create a static page`_ (i.e. *About us* page)
+
+.. _Tutorial\: create a blog: http://wagtail-nesting-box.readthedocs.io/en/latest/tutorial_blog/
+.. _Tutorial\: create a static page: http://wagtail-nesting-box.readthedocs.io/en/latest/tutorial_static_page/
 
 Documentation
 -------------
 
-Coming soon
+Full documentation for the project is available at http://wagtail-nesting-box.readthedocs.io/
 
 License
 -------
