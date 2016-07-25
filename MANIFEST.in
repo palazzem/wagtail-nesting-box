@@ -1,0 +1,7 @@
+include README.rst
+include LICENSE
+recursive-include wagtail_box/templates *.html
+recursive-include wagtail_box/blog/templates *.html
+recursive-include wagtail_box/pages/templates *.html
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
