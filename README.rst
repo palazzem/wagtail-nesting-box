@@ -8,6 +8,10 @@ Wagtail nesting box
 .. image:: https://codecov.io/gh/palazzem/wagtail-nesting-box/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/palazzem/wagtail-nesting-box
 
+.. image:: https://readthedocs.org/projects/wagtail-nesting-box/badge/?version=latest
+    :target: http://wagtail-nesting-box.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 A set of abstract and concrete models for your `Wagtail`_ website.
 
 .. _Wagtail: https://wagtail.io/
