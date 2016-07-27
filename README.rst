@@ -2,6 +2,9 @@
 Wagtail nesting box
 ===================
 
+.. image:: https://badge.fury.io/py/wagtail-nesting-box.svg
+    :target: https://badge.fury.io/py/wagtail-nesting-box
+
 .. image:: https://travis-ci.org/palazzem/wagtail-nesting-box.svg?branch=master
     :target: https://travis-ci.org/palazzem/wagtail-nesting-box
 
