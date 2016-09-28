@@ -14,8 +14,8 @@ Just follow the guidelines and submit a PR.
 ## Requirements
 
 * Python 2.7, 3.3, 3.4 and 3.5
-* Django 1.8, 1.9 (only with Python 2.7 and 3.4+)
-* Wagtail 1.4, 1.5
+* Django 1.8, 1.9 and 1.10 (only with Python 2.7 and 3.4+)
+* Wagtail 1.5 and 1.6 (required by Django 1.10+)
 
 ## Overview
 

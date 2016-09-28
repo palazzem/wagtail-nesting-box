@@ -1,3 +1,7 @@
+# 0.2.1
+
+* update docs
+
 # 0.2.0
 
 **Support**
