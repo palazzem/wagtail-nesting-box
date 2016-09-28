@@ -6,20 +6,23 @@ python:
 sudo: false
 
 env:
-    - TOX_ENV=py27-django18-wagtail14
     - TOX_ENV=py27-django18-wagtail15
-    - TOX_ENV=py33-django18-wagtail14
     - TOX_ENV=py33-django18-wagtail15
-    - TOX_ENV=py34-django18-wagtail14
     - TOX_ENV=py34-django18-wagtail15
-    - TOX_ENV=py35-django18-wagtail14
     - TOX_ENV=py35-django18-wagtail15
-    - TOX_ENV=py27-django19-wagtail14
+    - TOX_ENV=py27-django18-wagtail16
+    - TOX_ENV=py33-django18-wagtail16
+    - TOX_ENV=py34-django18-wagtail16
+    - TOX_ENV=py35-django18-wagtail16
     - TOX_ENV=py27-django19-wagtail15
-    - TOX_ENV=py34-django19-wagtail14
     - TOX_ENV=py34-django19-wagtail15
-    - TOX_ENV=py35-django19-wagtail14
     - TOX_ENV=py35-django19-wagtail15
+    - TOX_ENV=py27-django19-wagtail16
+    - TOX_ENV=py34-django19-wagtail16
+    - TOX_ENV=py35-django19-wagtail16
+    - TOX_ENV=py27-django110-wagtail16
+    - TOX_ENV=py34-django110-wagtail16
+    - TOX_ENV=py35-django110-wagtail16
 
 install:
     - pip install tox
