@@ -109,9 +109,9 @@ class Post(Page):
     tags = ClusterTaggableManager(through=PostTag, blank=True)
     date = models.DateField(_('Post date'))
 
-    search_fields = Page.search_fields + (
+    search_fields = Page.search_fields + [
         index.SearchField('body'),
-    )
+    ]
 
     content_panels = Page.content_panels + [
         FieldPanel('intro'),

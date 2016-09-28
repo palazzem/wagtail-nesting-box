@@ -10,9 +10,9 @@ from ..fields import BodyStreamBlock
 class StaticPage(Page):
     body = StreamField(BodyStreamBlock())
 
-    search_fields = Page.search_fields + (
+    search_fields = Page.search_fields + [
         index.SearchField('body'),
-    )
+    ]
 
     content_panels = Page.content_panels + [
         StreamFieldPanel('body'),
