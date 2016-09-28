@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements-codestyle.txt requirements-codestyle.in
 #
-flake8==2.6.2
-mccabe==0.5.0             # via flake8
+flake8==3.0.4
+mccabe==0.5.2             # via flake8
 pycodestyle==2.0.0        # via flake8
 pyflakes==1.2.3           # via flake8
