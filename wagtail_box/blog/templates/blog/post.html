@@ -1,10 +1,14 @@
-<div>
-    <article>
-        <h2>{{ page.title }}</h2>
-        <div>
-            <a>{{ page.owner.get_full_name|default:page.owner }}</a>
-            <span>{{ page.date|date:"N d, Y" }}</span>
-        </div>
-        {% include "partials/streamfield.html" with content=self.body %}
-    </article>
-</div>
+{% include "partials/base.html" %}
+
+{% block content %}
+  <div>
+      <article>
+          <h2>{{ page.title }}</h2>
+          <div>
+              <a>{{ page.owner.get_full_name|default:page.owner }}</a>
+              <span>{{ page.date|date:"N d, Y" }}</span>
+         </div>
+         {% include "partials/streamfield.html" with content=self.body %}
+      </article>
+  </div>
+{% endblock %}

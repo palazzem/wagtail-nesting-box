@@ -25,6 +25,7 @@ def test_blog_articles():
 
     assert len(blog.articles) == 2
 
+
 @pytest.mark.django_db
 def test_blog_articles_order():
     """
@@ -46,6 +47,7 @@ def test_blog_articles_order():
 
     assert blog.articles[0] == post_2
     assert blog.articles[1] == post_1
+
 
 @pytest.mark.django_db
 def test_blog_articles_only_live():
@@ -69,6 +71,7 @@ def test_blog_articles_only_live():
     assert post_1 in blog.articles
     assert post_2 not in blog.articles
 
+
 @pytest.mark.django_db
 def test_blog_exposes_empty_tags_as_default():
     """
@@ -86,6 +89,7 @@ def test_blog_exposes_empty_tags_as_default():
     link_page(blog, post)
 
     assert len(blog.tags) == 0
+
 
 @pytest.mark.django_db
 def test_blog_exposes_articles_tags():
@@ -109,6 +113,7 @@ def test_blog_exposes_articles_tags():
     assert len(blog.tags) == 2
     assert tag_1 in blog.tags
     assert tag_2 in blog.tags
+
 
 @pytest.mark.django_db
 def test_blog_exposes_articles_tags_are_order():

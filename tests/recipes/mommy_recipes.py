@@ -5,17 +5,20 @@ from model_mommy.recipe import Recipe, seq, foreign_key
 from wagtail_box.blog.models import Blog, Post
 
 
-content_type = Recipe(ContentType,
+content_type = Recipe(
+    ContentType,
     app_label='blog',
 )
 
-blog = Recipe(Blog,
+blog = Recipe(
+    Blog,
     content_type=foreign_key(content_type),
     title=seq('Blog '),
     slug=seq('blog-'),
 )
 
-post = Recipe(Post,
+post = Recipe(
+    Post,
     content_type=foreign_key(content_type),
     title=seq('Post '),
     slug=seq('post-'),

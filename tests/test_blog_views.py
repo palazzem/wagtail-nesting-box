@@ -50,7 +50,7 @@ def test_blog_tag_filter(rf):
     link_page(blog, posts)
     # append the proper tags
     tag_1 = mommy.make('blog.PostTag', content_object=posts[0]).tag
-    tag_2 = mommy.make('blog.PostTag', content_object=posts[1]).tag
+    mommy.make('blog.PostTag', content_object=posts[1]).tag
     # the third post is tagged with tag_1
     mommy.make('blog.PostTag', tag=tag_1, content_object=posts[2])
     # create a fake request with a tag attribute
