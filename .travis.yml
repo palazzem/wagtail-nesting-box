@@ -1,11 +1,11 @@
+sudo: false
 language: python
 
 python:
     - "3.5"
 
-sudo: false
-
 env:
+    - TOX_ENV=flake8
     - TOX_ENV=py27-django18-wagtail15
     - TOX_ENV=py33-django18-wagtail15
     - TOX_ENV=py34-django18-wagtail15
@@ -14,15 +14,28 @@ env:
     - TOX_ENV=py33-django18-wagtail16
     - TOX_ENV=py34-django18-wagtail16
     - TOX_ENV=py35-django18-wagtail16
+    - TOX_ENV=py27-django18-wagtail17
+    - TOX_ENV=py33-django18-wagtail17
+    - TOX_ENV=py34-django18-wagtail17
+    - TOX_ENV=py35-django18-wagtail17
     - TOX_ENV=py27-django19-wagtail15
     - TOX_ENV=py34-django19-wagtail15
     - TOX_ENV=py35-django19-wagtail15
     - TOX_ENV=py27-django19-wagtail16
     - TOX_ENV=py34-django19-wagtail16
     - TOX_ENV=py35-django19-wagtail16
+    - TOX_ENV=py27-django19-wagtail17
+    - TOX_ENV=py34-django19-wagtail17
+    - TOX_ENV=py35-django19-wagtail17
     - TOX_ENV=py27-django110-wagtail16
     - TOX_ENV=py34-django110-wagtail16
     - TOX_ENV=py35-django110-wagtail16
+    - TOX_ENV=py27-django110-wagtail17
+    - TOX_ENV=py34-django110-wagtail17
+    - TOX_ENV=py35-django110-wagtail17
+
+matrix:
+    fast_finish: true
 
 install:
     - pip install tox
